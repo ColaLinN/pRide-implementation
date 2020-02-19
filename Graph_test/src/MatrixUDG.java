@@ -520,7 +520,8 @@ public class MatrixUDG {
     public void road_embedding(int[][] path){
         //以上获得打乱的10位数字
         ArrayList<Integer> list = new ArrayList<Integer>();
-        Random rand = new Random(1);
+        //        (6,9) (7,8) (4,2) (0,3) (1,5)
+        Random rand = new Random();
         for (int i = 0; i < 10; i++)
             list.add(new Integer(i));
         System.out.println("打乱前:");
@@ -530,11 +531,14 @@ public class MatrixUDG {
         //打印洗牌列表
 //        System.out.println(list);
         //转换为数组
-        Integer[] random_array=new Integer[path.length];
-        list.toArray(random_array);
+//        Integer[] random_array=new Integer[path.length];
+//        list.toArray(random_array);
+        Integer[] random_array={9,0,2,4,1,7,3,5,6,8};
         this.print_random_array(2,random_array);
         //以下计算Omega Ω
         int group_number=2;
+//        for (int i = 0; i < 10; i++)
+//            random_array[i]=i;
         int[][] Omega=new int[path.length][path.length/group_number];//2个点一组
         for (int i = 0; i < path.length; i++) {
             int Omega_j=0;
@@ -545,8 +549,12 @@ public class MatrixUDG {
         }
         this.print_Omega("road_embedding:",Omega);
         //以下计算节点a的路网嵌入向量
-        int[] pointA_S=this.calc_point(0,6,11,14,Omega);
-        int[] pointB_S=this.calc_point(8,9,1,2,Omega);
+        int[] pointA_S=this.calc_point(1,5,30,70,Omega);
+        int[] pointB_S=this.calc_point(8,9,20,30,Omega);
+//        int[] pointB_S=this.calc_point(4,3,40,40,Omega);
+//        int[] pointB_S=this.calc_point(2,5,40,60,Omega);
+//        int[] pointB_S=this.calc_point(0,5,10,160,Omega);
+
         this.two_point_len(pointA_S,pointB_S);
 
     }
@@ -629,18 +637,28 @@ public class MatrixUDG {
 //           /*F*/ {  16,   7,   6, INF,   2,   0,   9},
 //           /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G','H','i','j'};
+//        int matrix[][] = {
+//                {0, 12, INF, INF, INF, 16, 14, INF, INF, INF},
+//                {12, 0, 10, INF, INF, 7, INF, INF, INF, INF},
+//                {INF, 10, 0, 3, 5, 6, INF, INF, INF, INF},
+//                {INF, INF, 3, 0, 4, INF, INF, INF, INF, INF},
+//                {INF, INF, 5, 4, 0, 2, 8, INF, INF, INF},
+//                {16, 7, 6, INF, 2, 0, 9, INF, INF, INF},
+//                {14, INF, INF, INF, 8, 9, 0, 1, INF, INF},
+//                {INF, INF, INF, INF, INF, INF, 1, 0, 1, INF},
+//                {INF, INF, INF, INF, INF, INF, INF, 1, 0, 3},
+//                {INF, INF, INF, INF, INF, INF, INF, INF, 3, 0},};
         int matrix[][] = {
-                {0, 12, INF, INF, INF, 16, 14, INF, INF, INF},
-                {12, 0, 10, INF, INF, 7, INF, INF, INF, INF},
-                {INF, 10, 0, 3, 5, 6, INF, INF, INF, INF},
-                {INF, INF, 3, 0, 4, INF, INF, INF, INF, INF},
-                {INF, INF, 5, 4, 0, 2, 8, INF, INF, INF},
-                {16, 7, 6, INF, 2, 0, 9, INF, INF, INF},
-                {14, INF, INF, INF, 8, 9, 0, 1, INF, INF},
-                {INF, INF, INF, INF, INF, INF, 1, 0, 1, INF},
-                {INF, INF, INF, INF, INF, INF, INF, 1, 0, 2},
-                {INF, INF, INF, INF, INF, INF, INF, INF, 2, 0},};
-
+                {0, 120, INF, INF, INF, 160, 140, INF, INF, INF},
+                {120, 0, 100, INF, INF, 70, INF, INF, INF, INF},
+                {INF, 100, 0, 30, 50, 60, INF, INF, INF, INF},
+                {INF, INF, 30, 0, 40, INF, INF, INF, INF, INF},
+                {INF, INF, 50, 40, 0, 20, 80, INF, INF, INF},
+                {160, 70, 60, INF, 20, 0, 90, INF, INF, INF},
+                {140, INF, INF, INF, 80, 90, 0, 10, INF, INF},
+                {INF, INF, INF, INF, INF, INF, 10, 0, 10, INF},
+                {INF, INF, INF, INF, INF, INF, INF, 10, 0, 30},
+                {INF, INF, INF, INF, INF, INF, INF, INF, 30, 0},};
         MatrixUDG pG;
 
         // 自定义"图"(输入矩阵队列)
