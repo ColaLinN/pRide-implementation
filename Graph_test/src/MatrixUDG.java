@@ -6,6 +6,9 @@
  */
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 public class MatrixUDG {
@@ -500,6 +503,98 @@ public class MatrixUDG {
         }
     }
 
+    public void floyd_path(int[][] path, int[][] dist){
+        for (int i = 0; i < mVexs.length; i++) {
+            for (int j = 0; j < mVexs.length; j++) {
+                System.out.print(i+"->"+j+":"+i);
+                int i_next=i;
+                do{
+                    i_next=path[i_next][j];
+                    System.out.print("->"+i_next);
+                }
+                while(path[i_next][j]!=j);
+                System.out.println();
+            }
+        }
+    }
+    public void road_embedding(int[][] path){
+        //以上获得打乱的10位数字
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        Random rand = new Random(1);
+        for (int i = 0; i < 10; i++)
+            list.add(new Integer(i));
+        System.out.println("打乱前:");
+        System.out.println(list);
+        //打乱
+        Collections.shuffle(list,rand);
+        //打印洗牌列表
+//        System.out.println(list);
+        //转换为数组
+        Integer[] random_array=new Integer[path.length];
+        list.toArray(random_array);
+        this.print_random_array(2,random_array);
+        //以下计算Omega Ω
+        int group_number=2;
+        int[][] Omega=new int[path.length][path.length/group_number];//2个点一组
+        for (int i = 0; i < path.length; i++) {
+            int Omega_j=0;
+            for (int j = 0; j < random_array.length; j=j+group_number) {
+                //以下必需重写为判断组内最小（目前一组为两个）
+                Omega[i][Omega_j++]=(path[i][random_array[j]]<path[i][random_array[j+1]])?path[i][random_array[j]]:path[i][random_array[j+1]];
+            }
+        }
+        this.print_Omega("road_embedding:",Omega);
+        //以下计算节点a的路网嵌入向量
+        int[] pointA_S=this.calc_point(0,6,11,14,Omega);
+        int[] pointB_S=this.calc_point(8,9,1,2,Omega);
+        this.two_point_len(pointA_S,pointB_S);
+
+    }
+    //j为一组输出array
+    public void print_random_array(int j,Integer array[]){
+        System.out.println("分组：");
+        for (int i = 0; i < array.length;i=i+2) {
+            System.out.print("("+array[i]+","+array[i+1]+") ");
+//            System.out.print("("+array[i]);
+//            i++;
+//            while(i<array.length&&(i)/j!=0){
+//                System.out.print(","+array[i]);
+//                i++;
+//            }
+//            System.out.print(") ");
+        }
+        System.out.println();
+    }
+    //打印路网嵌入
+    public void print_Omega(String name,int[][] Omega){
+        // 打印Omega
+        System.out.println(name);
+        for (int i = 0; i < Omega.length; i++) {
+            for (int j = 0; j < Omega[0].length; j++)
+                System.out.printf("%2d  ", Omega[i][j]);
+            System.out.printf("\n");
+        }
+    }
+    //计算路上某点的路网嵌入向量
+    //RE 为Road-Embedding
+    public int[] calc_point(int next_a,int next_b,int point2a_len,int a2b_len,int[][] RE){
+        int[] point_RE=new int[RE[0].length];
+        int point2b_len=a2b_len-point2a_len;
+        for (int i = 0; i < RE[0].length; i++) {
+            point_RE[i]=Math.min(RE[next_a][i]+point2a_len,RE[next_b][i]+point2b_len);
+        }
+        return point_RE;
+    }
+    //计算两点之间最短距离
+    public void two_point_len(int[] pointA,int[] pointB){
+        int Min_len=0;
+        Min_len=Math.abs(pointA[0]-pointB[0]);
+        for (int i = 1; i < pointA.length; i++) {
+            Min_len=Math.max(Math.abs(pointA[i]-pointB[i]),Min_len);
+        }
+        System.out.println("两点之间最短距离是：");
+        System.out.println(Min_len);
+    }
     // 边的结构体
     private static class EData {
         char start; // 边的起点
@@ -523,16 +618,29 @@ public class MatrixUDG {
 //                {INF,INF,50,0,20,10},
 //                {30,INF,INF,20,0,60},
 //                {100,INF,INF,10,60,0}};
-         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
-         int matrix[][] = {
-                  /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
-           /*A*/ {   0,  12, INF, INF, INF,  16,  14},
-           /*B*/ {  12,   0,  10, INF, INF,   7, INF},
-           /*C*/ { INF,  10,   0,   3,   5,   6, INF},
-           /*D*/ { INF, INF,   3,   0,   4, INF, INF},
-           /*E*/ { INF, INF,   5,   4,   0,   2,   8},
-           /*F*/ {  16,   7,   6, INF,   2,   0,   9},
-           /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
+//         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+//         int matrix[][] = {
+//                  /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
+//           /*A*/ {   0,  12, INF, INF, INF,  16,  14},
+//           /*B*/ {  12,   0,  10, INF, INF,   7, INF},
+//           /*C*/ { INF,  10,   0,   3,   5,   6, INF},
+//           /*D*/ { INF, INF,   3,   0,   4, INF, INF},
+//           /*E*/ { INF, INF,   5,   4,   0,   2,   8},
+//           /*F*/ {  16,   7,   6, INF,   2,   0,   9},
+//           /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
+        char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G','H','i','j'};
+        int matrix[][] = {
+                {0, 12, INF, INF, INF, 16, 14, INF, INF, INF},
+                {12, 0, 10, INF, INF, 7, INF, INF, INF, INF},
+                {INF, 10, 0, 3, 5, 6, INF, INF, INF, INF},
+                {INF, INF, 3, 0, 4, INF, INF, INF, INF, INF},
+                {INF, INF, 5, 4, 0, 2, 8, INF, INF, INF},
+                {16, 7, 6, INF, 2, 0, 9, INF, INF, INF},
+                {14, INF, INF, INF, 8, 9, 0, 1, INF, INF},
+                {INF, INF, INF, INF, INF, INF, 1, 0, 1, INF},
+                {INF, INF, INF, INF, INF, INF, INF, 1, 0, 2},
+                {INF, INF, INF, INF, INF, INF, INF, INF, 2, 0},};
+
         MatrixUDG pG;
 
         // 自定义"图"(输入矩阵队列)
@@ -540,20 +648,22 @@ public class MatrixUDG {
         // 采用已有的"图"
         pG = new MatrixUDG(vexs, matrix);
 
-        pG.print();   // 打印图
-        pG.DFS();     // 深度优先遍历
-        pG.BFS();     // 广度优先遍历
-        pG.prim(0);   // prim算法生成最小生成树
-        pG.kruskal(); // Kruskal算法生成最小生成树
+//        pG.print();   // 打印图
+//        pG.DFS();     // 深度优先遍历
+//        pG.BFS();     // 广度优先遍历
+//        pG.prim(0);   // prim算法生成最小生成树
+//        pG.kruskal(); // Kruskal算法生成最小生成树
 
         int[] prev = new int[pG.mVexs.length];
         int[] dist = new int[pG.mVexs.length];
         // dijkstra算法获取"第4个顶点"到其它各个顶点的最短距离
-        //pG.dijkstra(3, prev, dist);
+//        pG.dijkstra(3, prev, dist);
 
         int[][] path = new int[pG.mVexs.length][pG.mVexs.length];
         int[][] floy = new int[pG.mVexs.length][pG.mVexs.length];
         // floyd算法获取各个顶点之间的最短距离
         pG.floyd(path, floy);
+//        pG.floyd_path(path,floy);
+        pG.road_embedding(floy);
     }
 }
