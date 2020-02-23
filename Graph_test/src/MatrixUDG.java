@@ -522,7 +522,7 @@ public class MatrixUDG {
         ArrayList<Integer> list = new ArrayList<Integer>();
         //        (6,9) (7,8) (4,2) (0,3) (1,5)
         Random rand = new Random();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 54; i++)
             list.add(new Integer(i));
         System.out.println("打乱前:");
         System.out.println(list);
