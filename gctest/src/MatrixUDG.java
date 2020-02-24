@@ -527,7 +527,7 @@ public class MatrixUDG {
     public int[][] road_embedding(int[][] floy){
         //以上获得打乱的10位数字
         ArrayList<Integer> list = new ArrayList<Integer>();
-        Random rand = new Random();
+        Random rand = new Random(1);
         for (int i = 0; i < 54; i++)   list.add(new Integer(i));
 //        System.out.print("打乱前:");
 //        System.out.println(list);
