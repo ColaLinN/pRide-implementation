@@ -1,70 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecaedb1d-ea25-48d1-904a-c00c723d57f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/garbled_circuit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/CryptChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/Transfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/AndGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/AndnotGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/Gate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/GenericGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/OrGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/Wire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/XnorGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Graph_test/src/yao/gate/XorGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jxl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allgraph.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gctest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jxl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/MatrixUDG$EData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/MatrixUDG.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/Road_embedding.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/garbled_circuit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/haha/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/CryptChain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/Transfer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/Utils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/AndGate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/AndnotGate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/Gate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/GenericGate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/OrGate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/Wire.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/XnorGate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/gctest/yao/gate/XorGate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MatrixUDG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Road_embedding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/garbled_circuit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/haha/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/CryptChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/Transfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/AndGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/AndnotGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/Gate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/GenericGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/OrGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/Wire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/XnorGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yao/gate/XorGate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Graph_test/allgraph.xls" beforeDir="false" afterPath="$PROJECT_DIR$/../Graph_test/allgraph.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Graph_test/out/production/Graph_test/MatrixUDG$EData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Graph_test/out/production/Graph_test/MatrixUDG$EData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Graph_test/out/production/Graph_test/MatrixUDG.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Graph_test/out/production/Graph_test/MatrixUDG.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Graph_test/out/production/Graph_test/Road_embedding.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Graph_test/out/production/Graph_test/Road_embedding.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Graph_test/src/MatrixUDG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Graph_test/src/MatrixUDG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Graph_test/src/Road_embedding.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Graph_test/src/Road_embedding.java" afterDir="false" />
+    <list default="true" id="ecaedb1d-ea25-48d1-904a-c00c723d57f4" name="Default Changelist" comment="整理1">
+      <change afterPath="$PROJECT_DIR$/src/Homo/Homomorphic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homo/KeyPair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homo/KeyPairBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homo/PrivateKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homo/PublicKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRIdeHalfImple/MatrixUDG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRIdeHalfImple/Road_embedding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRIdeHalfImple/Road_embedding_Origin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRIdeHalfImple/garbled_circuit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLD/CP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLD/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLD/ORH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLD/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLD/Rider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLD/initial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pRideREALWORLDTEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gctest/MatrixUDG$EData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gctest/MatrixUDG.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gctest/Road_embedding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gctest/garbled_circuit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MatrixUDG.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Road_embedding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/garbled_circuit.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,17 +61,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1YG5AorR5OhlxS3BK1GzKMbyp6l" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jxl.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pRIde-Half-Imple" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -120,17 +84,19 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\github_repo\JAVA\pRide_impl_repo\pRide_impl_repo\gctest\src\pRIde-Half-Imple" />
+      <recent name="E:\github_repo\JAVA\pRide_impl_repo\pRide_impl_repo\gctest\src\Homo" />
       <recent name="E:\github_repo\JAVA\pRide_impl_repo\pRide_impl_repo\gctest" />
       <recent name="E:\github_repo\JAVA\pRide_impl_repo\pRide_impl_repo\gctest\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Road_embedding">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="yao.Main" />
+  <component name="RunManager" selected="Application.Road_embedding (1)">
+    <configuration name="CP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pRideREALWORLD.CP" />
       <module name="gctest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="yao.*" />
+          <option name="PATTERN" value="pRideREALWORLD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,33 +104,72 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="haha.Main" />
+    <configuration name="Homomorphic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homo.Homomorphic" />
       <module name="gctest" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Road_embedding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Road_embedding" />
+    <configuration name="Road_embedding (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pRIdeHalfImple.Road_embedding" />
       <module name="gctest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pRIdeHalfImple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Road_embedding_Origin (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pRIdeHalfImple.Road_embedding_Origin" />
+      <module name="gctest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pRIdeHalfImple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="garbled_circuit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pRIdeHalfImple.garbled_circuit" />
+      <module name="gctest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pRIdeHalfImple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.Road_embedding" />
+      <item itemvalue="Application.Homomorphic" />
+      <item itemvalue="Application.Road_embedding_Origin (1)" />
+      <item itemvalue="Application.Road_embedding (1)" />
+      <item itemvalue="Application.CP" />
+      <item itemvalue="Application.garbled_circuit" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Road_embedding" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Road_embedding (1)" />
+        <item itemvalue="Application.garbled_circuit" />
+        <item itemvalue="Application.CP" />
+        <item itemvalue="Application.Homomorphic" />
+        <item itemvalue="Application.Road_embedding_Origin (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -181,17 +186,40 @@
       <workItem from="1582504154307" duration="11513000" />
       <workItem from="1582555951747" duration="2668000" />
       <workItem from="1582558741125" duration="6859000" />
+      <workItem from="1582604116714" duration="614000" />
+      <workItem from="1582605056294" duration="434000" />
+      <workItem from="1587883512603" duration="15784000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1587897642461">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587897642461" />
+    <state x="465" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587887589434">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1587887589434" />
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1587897955164">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587897955164" />
     <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582556287512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1582556287512" />
+    <state x="324" y="8" key="CommitChangelistDialog2" timestamp="1587890341744">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="324" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587890341744" />
     <state width="424" height="441" key="DebuggerActiveHint" timestamp="1582560481524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -200,22 +228,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="445" y="156" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582557502969" />
-    <state width="1493" height="363" key="GridCell.Tab.0.bottom" timestamp="1582565613322">
+    <state width="1493" height="143" key="GridCell.Tab.0.bottom" timestamp="1587897235761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="363" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582565613322" />
-    <state width="1493" height="363" key="GridCell.Tab.0.center" timestamp="1582565613322">
+    <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587897235761" />
+    <state width="1493" height="143" key="GridCell.Tab.0.center" timestamp="1587897235761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="363" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582565613322" />
-    <state width="1493" height="363" key="GridCell.Tab.0.left" timestamp="1582565613322">
+    <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587897235761" />
+    <state width="1493" height="143" key="GridCell.Tab.0.left" timestamp="1587897235761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="363" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582565613322" />
-    <state width="1493" height="363" key="GridCell.Tab.0.right" timestamp="1582565613322">
+    <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587897235761" />
+    <state width="1493" height="143" key="GridCell.Tab.0.right" timestamp="1587897235761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="363" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582565613322" />
+    <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587897235761" />
     <state width="1493" height="363" key="GridCell.Tab.1.bottom" timestamp="1582565613323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -236,14 +264,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582557506657" />
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1582558746381">
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1582605054832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582558746381" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582605054832" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1582557178047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1582557178047" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587890074346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587890074346" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

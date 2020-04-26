@@ -1,8 +1,13 @@
+package pRIdeHalfImple;
 /**
  * Java: Floyd算法获取最短路径(邻接矩阵)
  *
  * @author skywang
  * @date 2014/04/25
+ *
+ * @author2 lfl
+ * @date 2020/2/18 添加了路网嵌入计算
+ *
  */
 
 import java.io.IOException;
@@ -18,7 +23,7 @@ public class MatrixUDG {
 //    private int[][] mMatrix;    // 邻接矩阵
 //    private static final int INF = Integer.MAX_VALUE;   // 最大值
     int mEdgNum;        // 边的数量
-    int[] mVexs;       // 顶点集合
+    public int[] mVexs;       // 顶点集合
     int[][] mMatrix;    // 邻接矩阵
     static final int INF = Integer.MAX_VALUE;   // 最大值
     int[][] Omega;
@@ -464,14 +469,29 @@ public class MatrixUDG {
         for (int i=0; i < mVexs.length; i++)
             System.out.printf("  shortest(%c, %c)=%d\n", mVexs[vs], mVexs[i], dist[i]);
     }
+    //输出floyd的路径（可视化）
+    public void floyd_path(int[][] path, int[][] dist){
+        for (int i = 0; i < mVexs.length; i++) {
+            for (int j = 0; j < mVexs.length; j++) {
+                System.out.print(i+"->"+j+":"+i);
+                int i_next=i;
+                do{
+                    i_next=path[i_next][j];
+                    System.out.print("->"+i_next);
+                }
+                while(path[i_next][j]!=j);
+                System.out.println();
+            }
+        }
+    }
 
     /*
      * floyd最短路径。
-     * 即，统计图中各个顶点间的最短路径。
+     * 即，统计图中各个顶点间的最短路径。并且dist将存在matrix对象中
      *
      * 参数说明：
      *     path -- 路径。path[i][j]=k表示，"顶点i"到"顶点j"的最短路径会经过顶点k。
-     *     dist -- 长度数组。即，dist[i][j]=sum表示，"顶点i"到"顶点j"的最短路径的长度是sum。
+     *     dist -- 距离数组。即，dist[i][j]=sum表示，"顶点i"到"顶点j"的最短路径的长度是sum。
      */
     public void floyd(int[][] path, int[][] dist) {
 
@@ -508,21 +528,7 @@ public class MatrixUDG {
 //            System.out.printf("\n");
 //        }
     }
-    //输出floyd的路径
-    public void floyd_path(int[][] path, int[][] dist){
-        for (int i = 0; i < mVexs.length; i++) {
-            for (int j = 0; j < mVexs.length; j++) {
-                System.out.print(i+"->"+j+":"+i);
-                int i_next=i;
-                do{
-                    i_next=path[i_next][j];
-                    System.out.print("->"+i_next);
-                }
-                while(path[i_next][j]!=j);
-                System.out.println();
-            }
-        }
-    }
+
     //路网嵌入计算
     public int[][] road_embedding(int[][] floy){
         //以上获得打乱的10位数字
