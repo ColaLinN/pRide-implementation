@@ -39,10 +39,12 @@ public class pRideREALWORLDTEST {
         Driver driver2=new Driver(55,55,pG,20,21,1301,cp.getPublicKey());
 
         //路网比较，这是直接比较。没有混淆电路、同态加密、没有全流程的
+        System.out.println("################################ 路网比较，这是直接比较。没有混淆电路、同态加密、没有全流程的 ###################");
         Road_map_compare(pG,rider.getRE_Graph_int(),driver1.getRE_Graph_int(),driver2.getRE_Graph_int());
 
 //      ################################ 以下为加入了混淆电路的比较全流程！！ #####################################
 
+        System.out.println("################################ 加入了混淆电路的比较 ######################################################");
         //首先，ORH计算pb
         BigInteger[] pb1=orh.calc_Pd(cp,rider.getRE_Graph_Cipher(),driver1.getRE_Graph_Cipher(),driver1.getMu_Cipher());
         BigInteger[] pb2=orh.calc_Pd(cp,rider.getRE_Graph_Cipher(),driver2.getRE_Graph_Cipher(),driver2.getMu_Cipher());

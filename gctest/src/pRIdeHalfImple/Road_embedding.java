@@ -143,9 +143,9 @@ public class Road_embedding {
         int Min_len1=RE.two_point_len(Ride,driver1);//乘客与司机1的距离
         int Min_len2=RE.two_point_len(Ride,driver2);//乘客与司机2的距离
         if(Min_len1<Min_len2){
-            System.out.println("路网嵌入算得,乘客离司机1最近");
+            System.out.println("路网嵌入算得：乘客离司机1最近");
         }else{
-            System.out.println("路网嵌入算得,乘客离司机2最近");
+            System.out.println("路网嵌入算得：乘客离司机2最近");
         }
     }
     //计算两点之间最短距离
@@ -218,7 +218,7 @@ public class Road_embedding {
                 mu1_min=mu1[i];
             }
         }
-        System.out.println("hhhhhh");
+//        System.out.println("hhhhhh");
         int driver2_min=driver2[0];
         int mu2_min=mu1[0];
         //比最小值，若driver小于mu，取绝对值
