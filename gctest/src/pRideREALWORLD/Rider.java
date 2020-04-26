@@ -32,6 +32,7 @@ public class Rider {
     public Rider(int x,int y,int zone,MatrixUDG pRide_Graph, int PointA, int PointB, int PointNow2A_len,PublicKey publicKey){
         this.x=x;
         this.y=y;
+        this.publicKey=publicKey;
         this.x_Chiper=this.HOMOencrypt(x);
         this.y_Chiper=this.HOMOencrypt(y);
 
@@ -41,12 +42,16 @@ public class Rider {
         this.PointA=PointA;
         this.PointB=PointB;
         this.PointNow2A_len=PointNow2A_len;
-        this.publicKey=publicKey;
 
-        this.RE_Graph=new BigInteger[pRide_Graph.mVexs.length];
+        this.RE_Graph=new BigInteger[pRide_Graph.Omega[0].length];
         int[] RE_Graph_inttype=pRide_Graph.calc_point(PointA,PointB,PointNow2A_len);//计算自己的路网嵌入变量S
-        for (int i = 0; i < pRide_Graph.mVexs.length; i++) {
+        for (int i = 0; i < pRide_Graph.Omega[0].length; i++) {
             this.RE_Graph[i]= BigInteger.valueOf(RE_Graph_inttype[i]);
+        }
+
+        this.RE_Graph_Cipher=new BigInteger[pRide_Graph.Omega[0].length];
+        for (int i = 0; i < this.pRide_Graph.Omega[0].length; i++) {
+            this.RE_Graph_Cipher[i]=this.HOMOencrypt(this.RE_Graph[i]);
         }
 
     }

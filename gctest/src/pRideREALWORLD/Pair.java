@@ -6,12 +6,28 @@ public class Pair<A,B> {
         return new Pair<P, Q>(p, q);
     }
 
-    public final A a;
-    public final B b;
+    public  A a;
+    public  B b;
 
     public Pair(A a, B b) {
         this.a = a;
         this.b = b;
+    }
+
+    public void setA(A a) {
+        this.a = a;
+    }
+
+    public void setB(B b) {
+        this.b = b;
+    }
+
+    public A getA() {
+        return a;
+    }
+
+    public B getB() {
+        return b;
     }
 
     @Override

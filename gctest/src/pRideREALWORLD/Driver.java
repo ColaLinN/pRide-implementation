@@ -29,32 +29,32 @@ public class Driver {
     public Driver(int x,int y,MatrixUDG pRide_Graph, int PointA, int PointB, int PointNow2A_len,PublicKey publicKey){
         this.x=x;
         this.y=y;
+        this.publicKey=publicKey;
         this.pRide_Graph=pRide_Graph;
         this.PointA=PointA;
         this.PointB=PointB;
         this.PointNow2A_len=PointNow2A_len;
-        this.publicKey=publicKey;
 
-        this.RE_Graph=new BigInteger[pRide_Graph.mVexs.length];
+        this.RE_Graph=new BigInteger[pRide_Graph.Omega[0].length];
         int[] RE_Graph_inttype=pRide_Graph.calc_point(PointA,PointB,PointNow2A_len);//计算自己的路网嵌入变量S
-        for (int i = 0; i < pRide_Graph.mVexs.length; i++) {
+        for (int i = 0; i < pRide_Graph.Omega[0].length; i++) {
             this.RE_Graph[i]= BigInteger.valueOf(RE_Graph_inttype[i]);
         }
 
-        this.mu=new BigInteger[pRide_Graph.mVexs.length];
+        this.mu=new BigInteger[pRide_Graph.Omega[0].length];
         Arrays.fill(this.mu, BigInteger.valueOf(3000));
 
-        this.RE_Graph_Cipher=new BigInteger[pRide_Graph.mVexs.length];
-        for (int i = 0; i < this.pRide_Graph.mVexs.length; i++) {
+        this.RE_Graph_Cipher=new BigInteger[pRide_Graph.Omega[0].length];
+        for (int i = 0; i < this.pRide_Graph.Omega[0].length; i++) {
             this.RE_Graph_Cipher[i]=this.HOMOencrypt(this.RE_Graph[i]);
         }
 
-        this.mu_Cipher=new BigInteger[pRide_Graph.mVexs.length];
-        for (int i = 0; i < this.pRide_Graph.mVexs.length; i++) {
+        this.mu_Cipher=new BigInteger[pRide_Graph.Omega[0].length];
+        for (int i = 0; i < this.pRide_Graph.Omega[0].length; i++) {
             this.mu_Cipher[i]=this.HOMOencrypt(this.mu[i]);
         }
 
-        this.RE_sub_mu_Cipher=new BigInteger[pRide_Graph.mVexs.length];
+        this.RE_sub_mu_Cipher=new BigInteger[pRide_Graph.Omega[0].length];
 
     }
 

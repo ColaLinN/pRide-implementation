@@ -7,6 +7,7 @@
 package pRideREALWORLD;
 
 import Homo.PublicKey;
+import pRIdeHalfImple.Road_embedding;
 
 import java.math.BigInteger;
 
@@ -28,7 +29,12 @@ public class ORH {
         }
         return Pd;
     }
-    public boolean gc_compare_2(){return false;}
+    public void gc_compare_2(CP cp,BigInteger[] Rider_Driver1,BigInteger[] Driver1_mu,BigInteger[] Rider_Driver2,BigInteger[] Driver2_mu){
+
+        Road_embedding REA=new Road_embedding();
+        REA.two_point_gc_test(REA,cp.HOMO_decrypt_int(Rider_Driver1), cp.HOMO_decrypt_int(Rider_Driver2),
+                                    cp.HOMO_decrypt_int(Driver1_mu),cp.HOMO_decrypt_int(Driver2_mu));
+    }
 
 //    public BigInteger[] calc_Rider_eta(){}
 //    public

@@ -33,7 +33,7 @@ public class CP {
     public BigInteger HOMOencrypt(int num){
         return publicKey.encrypt(BigInteger.valueOf(num));
     }
-    //数组加密
+    //加密
     public BigInteger HOMOencrypt(BigInteger num){
         return publicKey.encrypt(num);
     }
@@ -75,7 +75,7 @@ public class CP {
         int[] Driver2_mu_int=HOMO_decrypt_int(Driver2_mu);
 //        garbled_circuit.get_GATE_IN(int d1, int d2, int mu1, int mu2)
         garbled_circuit gc=new garbled_circuit();
-        return ;
+//        return ;
     }
     //测试
     public static void main(String[] args) {

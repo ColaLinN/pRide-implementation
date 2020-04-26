@@ -26,7 +26,7 @@ public class MatrixUDG {
     public int[] mVexs;       // 顶点集合
     int[][] mMatrix;    // 邻接矩阵
     static final int INF = Integer.MAX_VALUE;   // 最大值
-    int[][] Omega;
+    public int[][] Omega;
     int[][] floy;
 
     /*

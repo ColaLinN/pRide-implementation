@@ -5,6 +5,7 @@ import pRIdeHalfImple.garbled_circuit;
 import pRideREALWORLD.*;
 
 import java.io.File;
+import java.math.BigInteger;
 import java.util.Arrays;
 
 import static pRIdeHalfImple.Road_embedding_Origin.*;
@@ -43,12 +44,11 @@ public class pRideREALWORLDTEST {
 //      ################################ 以下为加入了混淆电路的比较全流程！！ #####################################
 
         //首先，ORH计算pb
-        orh.calc_Pd(cp,rider.getRE_Graph_Cipher(),driver1.getRE_Graph_Cipher(),driver2.getRE_Graph_Cipher());
-        //ORH将pb发给cp解密得到混淆pb
-
-        //ORH判断两个司机哪个离乘客近
-
-        garbled_circuit gc=new garbled_circuit();
-        if(gc.gc_compare_2(2,5,0,0)) System.out.println("yes");
+        BigInteger[] pb1=orh.calc_Pd(cp,rider.getRE_Graph_Cipher(),driver1.getRE_Graph_Cipher(),driver1.getMu_Cipher());
+        BigInteger[] pb2=orh.calc_Pd(cp,rider.getRE_Graph_Cipher(),driver2.getRE_Graph_Cipher(),driver2.getMu_Cipher());
+        //ORH将pb发给cp解密
+        cp.get_garbled_value(pb1,driver1.getMu_Cipher(),pb2,driver2.getMu_Cipher());
+        //ORH从cp处获得混淆值到混淆pb判断两个司机哪个离乘客近
+        orh.gc_compare_2(cp,pb1,driver1.getMu_Cipher(),pb2,driver2.getMu_Cipher());
     }
 }
