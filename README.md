@@ -1,5 +1,5 @@
 # pRide_impl_repo
-pRide论文的复现
+pRide论文的复现 => [介绍](https://colalinn.github.io/2020/01/23/2020-01-23-pRide-optimized-construction/#more)
 
 下面附一张我们的仿真地图
 
